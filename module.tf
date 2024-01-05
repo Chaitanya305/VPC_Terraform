@@ -32,3 +32,15 @@ module "vpc" {
 	priv_instance_name = "private_instnace"
 	pub_instance_name = "public_instance"
 }
+
+output "mod_pub_instance_pub_ip" {
+	value = module.vpc.pub_instance_pub_ip
+}
+
+output "mod_pub_instance_priv_ip" {
+	value = module.vpc.pub_instance_priv_ip
+}
+
+output "mod_priv_instance_priv_ip" {
+	value = module.vpc.priv_instance_priv_ip
+}
